@@ -1,16 +1,17 @@
-number = "1234.5678"
+number = 1234.5678
 
 
 def new_number(number, before, after):
+    str_number = str(number)
     before_decimal = ""
     after_decimal = ""
-    decimal = number.find(".")
+    decimal = str_number.find(".")
 
-    for i, num in enumerate(str(number)):
+    for i, num in enumerate(str_number):
         if i < decimal:
-            before_decimal += number[i]
+            before_decimal += str_number[i]
         elif i > decimal:
-            after_decimal += number[i]
+            after_decimal += str_number[i]
 
     return before_decimal[before:] + "." + after_decimal[:after]
 
