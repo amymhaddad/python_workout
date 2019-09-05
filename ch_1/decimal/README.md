@@ -1,0 +1,1 @@
+ Write a function that takes two strings from the user, turns them into Decimal instances, and then prints the floating-point answer. In other words, make it possible for the user to enter 0.1 and 0.2, and for us to get 0.3 back.
