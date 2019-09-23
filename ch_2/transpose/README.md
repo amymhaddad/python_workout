@@ -1,0 +1,3 @@
+Take a text file, creating (and printing) a nonsensical sentence from the nth word on each of the first 10 lines, where n is the line number.
+
+Write a function that transposes a list of strings, in which each string contains multiple words separated by whitespace. So if you were to pass the list ['abc def ghi', 'jkl mno pqr', 'stu vwx yz'] to the function, it would return ['abc jkl stu', 'def mno vwx', 'ghi pqr yz'].
