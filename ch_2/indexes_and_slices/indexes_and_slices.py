@@ -17,7 +17,7 @@ def sum_even_indexed_numbers(numbers):
     return [sum(even_index), sum(odd_index)]
 
 
-print(sum_even_indexed_numbers(numbers))
+# print(sum_even_indexed_numbers(numbers))
 
 
 # Write a function that takes a list or tuple of numbers.
@@ -38,7 +38,7 @@ def plus_minus(numbers):
     return update_number
 
 
-print(plus_minus(numbers))
+# print(plus_minus(numbers))
 
 
 # Write a function that emulates the builtin zip function, taking any number of iterables and returning a list of tuples.
@@ -50,8 +50,17 @@ one = [10, 20, 30]
 two = "abc"
 
 
-def myzip(iter1, iter2):
-    return list(zip(iter1, iter2))
+def myzip(*iterables):
+    number_of_args = len(iterables)
+
+    list_of_tuples = []
+
+    for i in range(number_of_args + 1):
+        tuple_of_iterables = ()
+        for term in iterables:
+            tuple_of_iterables += (term[i],)
+        list_of_tuples.append(tuple_of_iterables)
+    return list_of_tuples
 
 
 print(myzip(one, two))
