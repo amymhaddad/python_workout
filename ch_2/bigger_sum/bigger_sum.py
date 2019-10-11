@@ -42,18 +42,48 @@ people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'},
 
 def single_dictionary(people):
 
-    single_dictionary = {}
-    
+    single_dict = {}
+    person_details = []
+
     for person in people:
         for key, value in person.items():
-            # single_dictionary.get(key, value)
-            # single_dictionary[key] = value
-    return single_dictionary
+            if key not in single_dict.keys():
+                person_details.append(value)
+                single_dict[key] = person_details
+                
+            else:
+
+                person_details.append(value)
+
+    return single_dict
         
-print(single_dictionary(people))
+# print(single_dictionary(people))
+
+# {'first': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'last': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'email': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru']}
 
 
-    # for key, value in person.items():
-    #     # print(key, value)
-    #     new_dictionary['key'] = value
-        
+
+person_details = []
+
+single_dict = {}
+people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'}, {'first':'Donald', 'last':'Trump', 'email':'president@whitehouse.gov'},]
+
+for person in people:
+    for key, value in person.items():
+        if key not in single_dict.keys():
+            single_dict[key] = [value]
+
+        else:
+            # import pdb; pdb.set_trace()
+            print(key)
+
+            print(single_dict[key] + [value])
+            # single_dict[key] + [value]
+            # print(single_dict)
+
+            
+                # single_dict.value + value
+            # print(single_dictionary[key])
+
+            
+print(single_dict)
