@@ -39,6 +39,26 @@ people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'},
  {'first':'Vladimir', 'last':'Putin', 'email':'president@kremvax.ru'}
  ]
 
+def combine_people(persons):
+    attributes = persons[0].keys()
+    
+    combined = {}
+
+    #this for loop creates a new list for each key
+    for key in attributes:
+        combined[key] = []
+
+    for person in persons:
+        
+        for attribute, value in person.items():
+            combined[attribute].append(value)
+
+    return combined
+        
+
+# print(combine_people(people))
+
+
 
 def single_dictionary(people):
 
@@ -46,44 +66,49 @@ def single_dictionary(people):
     person_details = []
 
     for person in people:
+        
         for key, value in person.items():
+            
             if key not in single_dict.keys():
-                person_details.append(value)
-                single_dict[key] = person_details
-                
+                #this syntax creates a new list [] in memory each time through the loop 
+                single_dict[key] = [value]                
             else:
+                single_dict[key].append(value)
 
-                person_details.append(value)
+        
 
     return single_dict
         
-# print(single_dictionary(people))
+print(single_dictionary(people))
+
 
 # {'first': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'last': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'email': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru']}
+# bigger_sum bigger_sum %
 
 
 
-person_details = []
 
-single_dict = {}
-people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'}, {'first':'Donald', 'last':'Trump', 'email':'president@whitehouse.gov'},]
+# person_details = []
 
-for person in people:
-    for key, value in person.items():
-        if key not in single_dict.keys():
-            single_dict[key] = [value]
+# single_dict = {}
+# people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'}, {'first':'Donald', 'last':'Trump', 'email':'president@whitehouse.gov'},]
 
-        else:
-            # import pdb; pdb.set_trace()
-            print(key)
+# for person in people:
+#     for key, value in person.items():
+#         if key not in single_dict.keys():
+#             single_dict[key] = [value]
 
-            print(single_dict[key] + [value])
-            # single_dict[key] + [value]
-            # print(single_dict)
+#         else:
+#             # import pdb; pdb.set_trace()
+#             print(key)
 
-            
-                # single_dict.value + value
-            # print(single_dictionary[key])
+#             print(single_dict[key] + [value])
+#             # single_dict[key] + [value]
+#             # print(single_dict)
 
             
-print(single_dict)
+#                 # single_dict.value + value
+#             # print(single_dictionary[key])
+
+            
+# print(single_dict)
