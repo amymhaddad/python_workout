@@ -39,21 +39,39 @@ people = [{'first':'Reuven', 'last':'Lerner', 'email':'reuven@lerner.co.il'},
  {'first':'Vladimir', 'last':'Putin', 'email':'president@kremvax.ru'}
  ]
 
-def combine_people(persons):
-    attributes = persons[0].keys()
+
+
+
+
+combined_people = {attribute:[] for attribute in people[0].keys()}
+
+add_user_details = [combined_people[attribute].append(person_detail) for person in people for attribute, person_detail in person.items()]
+
+print(combined_people)
+
+
+
+
+
+
+
+
+
+# def combine_people(persons):
+#     attributes = persons[0].keys()
     
-    combined = {}
+#     combined = {}
 
-    #this for loop creates a new list for each key
-    for key in attributes:
-        combined[key] = []
+#     #this for loop creates a new list for each key
+#     for key in attributes:
+#         combined[key] = []
 
-    for person in persons:
+#     for person in persons:
         
-        for attribute, value in person.items():
-            combined[attribute].append(value)
+#         for attribute, value in person.items():
+#             combined[attribute].append(value)
 
-    return combined
+#     return combined
         
 
 # print(combine_people(people))
@@ -79,7 +97,7 @@ def single_dictionary(people):
 
     return single_dict
         
-print(single_dictionary(people))
+# print(single_dictionary(people))
 
 
 # {'first': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'last': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru'], 'email': ['Reuven', 'Lerner', 'reuven@lerner.co.il', 'Donald', 'Trump', 'president@whitehouse.gov', 'Vladimir', 'Putin', 'president@kremvax.ru']}
