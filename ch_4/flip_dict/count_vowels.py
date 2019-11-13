@@ -47,14 +47,16 @@ file_length = {file: len(file) for file in files}
 # Use a dict comprehension to read from the file, turning each line into a key-value pair.
 # (If you wish, you can do this for Unix’s /etc/passwd file, creating a dict from the usernames (index 0) and user ID number (index 2) on each line containing a user record.
 
-name_values = {}
-with open("config_file.txt") as f_object:
-    rows = f_object.readlines()
-    for i, row in enumerate(rows):
-        equals = "="
-        if row[i] == equals:
-            continue
 
-        name_values[row[i:equals]]
+def read_config_file(file):
+    with open(file) as f_object:
+        return f_object.readlines()
 
-# LOGNAME=amyhaddad
+
+def create_name_value_dictionary(rows):
+    name_values = {}
+    unique_row = [row.split("=") for row in rows]
+    return {item[0]: item[-1] for item in unique_row}
+
+
+print(create_name_value_dictionary(read_config_file("config_file.txt")))
