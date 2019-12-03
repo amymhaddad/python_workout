@@ -1,0 +1,1 @@
+Ask the user for the name of a text file. The program then prints the file’s final line on the screen. The contents of the file is separated by carriage returns.

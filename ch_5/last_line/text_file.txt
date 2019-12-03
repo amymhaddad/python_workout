@@ -1,0 +1,5 @@
+It’s very common for new Python programmers to learn how they can iterate over the lines of a file, printing one line at a time. 
+But what if I’m not interested in each line, or even in most of the lines? And what about numbers, like 12, 13, and 14?
+What if I’m only interested in a single line—the final line of the file? 
+Can you get practice reading in numbers, like 100 and 25? Try it. And add 200 to the list, too.
+This is the last line.
