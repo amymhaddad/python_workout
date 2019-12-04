@@ -1,0 +1,1 @@
+There are four exercises that involve functions. The directions for each exercise is listed as a comment in the file, sum_numbers.py. The tests for each exericise is located in the file, test_sum_numbers.py. Since the exercises are short, and there are many of them, they are all combined.
