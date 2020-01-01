@@ -1,0 +1,4 @@
+key	type-of-value
+a	<class 'int'>
+b	<class 'str'>
+c	<class 'int'>
