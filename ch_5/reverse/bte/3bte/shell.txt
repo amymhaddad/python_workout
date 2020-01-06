@@ -1,0 +1,3 @@
+/usr/bin/false: nobody, _taskgated, _networkd, daemon, _taskgated, _networkd, _installassistant, _lp, _postfix, _scsd, _ces, _appstore, _mcxalr, _appleevents, _geod, _devdocs, _sandbox, _mdnsresponder, _ard, _www, _eppc, _cvs, _svn, _mysql, _sshd, _qtss, _cyrus, _mailman, _appserver, _clamav, 
+/bin/sh: root, 
+/usr/sbin/uucico: _uucp, 
