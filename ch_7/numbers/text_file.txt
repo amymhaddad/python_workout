@@ -1,0 +1,6 @@
+This is a test text file that I'm using for Python Workout with lots of characters.
+BBB.
+It's a test.
+Only a test.
+I want to filter the correct lines using a comprehension.
+ZZZ.
