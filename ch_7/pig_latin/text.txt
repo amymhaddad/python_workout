@@ -1,0 +1,2 @@
+This is a file of text
+It is for the functional programming chapter in Python Workout.

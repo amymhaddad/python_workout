@@ -1,13 +1,26 @@
+import re
 
 
-words = "air python"
+words = "text.txt"
 
-new_words = ''
-for word in words.split(" "):
-    if word.startswith(("a", "e", "i", "o", "u")):
-        
-        new_words += word +"way " 
-    else:
-        new_words += word[1:] + word[0] + "ay" + " "
+def parse_data(words):
+    return [  
+        re.sub(r'[\W+]',"", words).lower()
+        for lines in open(words)
+        for words in lines.split(" ")     
+    ]
 
+
+
+def pig_latin(list_of_words):
+
+    return "".join([
+        word +"way " 
+        if word.startswith(("a", "e", "i", "o", "u"))
+        else word[1:] + word[0] + "ay" + " "
+        for word in parse_data(words)
+    ])
+    
+ 
+print(pig_latin(words))
 
