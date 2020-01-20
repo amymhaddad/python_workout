@@ -11,16 +11,14 @@ def parse_data(words):
     ]
 
 
-
 def pig_latin(list_of_words):
 
-    return "".join([
+    return "".join(
         word +"way " 
-        if word.startswith(("a", "e", "i", "o", "u"))
+        if word[0] in "aeiou"
         else word[1:] + word[0] + "ay" + " "
         for word in parse_data(words)
-    ])
+    )
     
- 
 print(pig_latin(words))
 
